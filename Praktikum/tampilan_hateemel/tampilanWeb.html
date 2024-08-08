@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Sembako</title>
+    <link rel="stylesheet" href="sembako.js">
+    <script>
+        function hitungTotal() {
+    const hargaBeras = 10000 // harga per kg
+    const hargaGula = 14000 // harga per kg
+    const hargaTelur = 20000 // harga per kg
+    const hargaMinyak = 9000 // harga per liter
+
+    document.getElementByClass("harga_gula").innerText = "sgfsdgs"
+
+    const beras = document.getElementById("beras").value
+    const gula = document.getElementById("gula").value
+    const telur = document.getElementById("telur").value
+    const minyak = document.getElementById("minyak").value
+
+    const totalBeras = beras * hargaBeras
+    const totalGula = gula * hargaGula
+    const totalTelur = telur * hargaTelur
+    const totalMinyak = minyak * hargaMinyak
+
+    const total = totalBeras + totalGula + totalTelur + totalMinyak
+
+    document.getElementById("total").innerText = "Total Harga: Rp "+total.toLocaleString()
+} 
+    </script>
+</head>
+
+<body>
+    <h1>Beli Sembako</h1>
+    <div class="harga_gula"></div>
+    <div>
+        <table>
+            <tr>
+                <td><label for="beras">Beras (kg):</label></td>
+                <td><input type="number" id="beras" value="0"></td>
+            </tr>
+        </table>
+    </div>  
+    <div>
+        <table>
+            <tr>
+                <td><label for="gula">Gula (<b>kg</b>):</label></td>
+                
+                <td><input type="number" id="gula" value="0"></td>
+                
+            </tr>
+        </table>
+    </div>
+    <div>
+        <td><label for="telur">Telur (kg):</label></td>
+        <td><input type="number" id="telur" value="0"></td>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td><label for="telur">Minyak (liter):</label></td>
+                <td><input type="number" id="minyak" value="0"></td>
+            </tr>
+        </table>
+    </div>
+    <button onclick="hitungTotal()">Hitung Total</button>
+    <div id="total"></div>
+
+    
+</body>
+
+</html>
